@@ -1,12 +1,12 @@
 class Queue {
     constructor() {
-        this.items = []
-        this.count = 0
+        this.items = [];
+        this.count = 0;
     }
     enqueue(item) {
-        this.items[this.count] = item
-        this.count++
-        return this.items
+        this.items[this.count] = item;
+        this.count++;
+        return this.items;
     }
     dequeue() {
         this.items.shift();
