@@ -1,14 +1,12 @@
-const insertionSort = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    let min = arr[i];
-    let j;
-
-    for (j = i - 1; j >= 0 && arr[j] > min; j--) {
-      arr[j + 1] = arr[j];
+const insertionSort = (array) => {
+  let start = 0;
+  let end = array.length - 1;
+  for(let i=start+1;i<=end;i++) {
+    for(let j=i;j>start&&array[j-1] > array[j];j--) {
+      [array[j-1], array[j]] = [array[j], array[j-1]];
     }
-    arr[j + 1] = min;
   }
-  return arr;
+  return array;
 };
 
 
